@@ -17,4 +17,5 @@ class ProjectsController < ApplicationController
     @my_project.save
     redirect_to "/projects/#{@my_project.id}"
   end
+ 
 end

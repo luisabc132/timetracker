@@ -3,8 +3,10 @@
   <% @my_entries.each do |entry| %>
   <li>
     <%= entry.hours %> h
-    <%= entry.minutes %> m 
+    <%= entry.minutes %> m
     <%= entry.date %>
+    <%= link_to("edit","/projects/#{@my_project.id}/time_entries/#{entry.id}/edit")%>
+    <%= link_to("delete",project_time_entry_path(@my_project, entry), method: :delete, data: {Confirm: 'Estas seguro'})%>
   </li>
   <% end %>
 </ul>
